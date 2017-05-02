@@ -5,9 +5,9 @@ const amdNameResolver = require('amd-name-resolver');
 const CompactReexports = require('../lib');
 
 QUnit.module('compact-reexports', function() {
-  function transform(code, moduleOptions, moduleId = 'bar') {
+  function transform(code, moduleOptions, moduleId) {
     const options = {
-      moduleId,
+      moduleId: moduleId || 'bar',
       filename: `${moduleId}.js`,
       resolveModuleSource: amdNameResolver.moduleResolve,
       plugins: [

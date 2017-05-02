@@ -11,3 +11,6 @@ cache: yarn
 
 script:
   - yarn test
+
+after_success:
+  - yarn run coverage

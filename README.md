@@ -1,6 +1,7 @@
 # babel-plugin-compact-reexports
 
 [![Build Status](https://travis-ci.org/ember-engines/babel-plugin-compact-reexports.svg?branch=master)](https://travis-ci.org/ember-engines/babel-plugin-compact-reexports)
+[![Coverage Status](https://coveralls.io/repos/github/ember-engines/babel-plugin-compact-reexports/badge.svg)](https://coveralls.io/github/ember-engines/babel-plugin-compact-reexports)
 
 Allows ES modules which just re-export contents of other modules to be more compact; saving you bytes over the wire.
 

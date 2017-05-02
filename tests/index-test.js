@@ -1,7 +1,5 @@
 'use strict';
 
-const path = require('path');
-
 const babel = require('babel-core');
 const amdNameResolver = require('amd-name-resolver');
 const CompactReexports = require('../lib');

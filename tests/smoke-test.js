@@ -9,7 +9,7 @@ const CompactReexports = require('../lib');
 
 const fixturePath = path.join(__dirname, 'fixtures', 'smoke');
 
-QUnit.module('compact-reexports - smoke', function(hooks) {
+QUnit.module('compact-reexports - smoke', function() {
   QUnit.test('correctly transforms simple re-export', function(assert) {
     // Compile code
     function compile(module) {

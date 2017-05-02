@@ -4,7 +4,7 @@ const babel = require('babel-core');
 const amdNameResolver = require('amd-name-resolver');
 const CompactReexports = require('../lib');
 
-QUnit.module('compact-reexports', function(hooks) {
+QUnit.module('compact-reexports', function() {
   function transform(code, moduleOptions, moduleId = 'bar') {
     const options = {
       moduleId,

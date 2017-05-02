@@ -27,6 +27,7 @@
     "babel-core": "^6.7.4",
     "babel-plugin-transform-es2015-modules-amd": "^6.24.0",
     "loader.js": "^4.4.0",
+    "qunit-eslint": "^1.0.0",
     "qunitjs": "^2.3.2"
   }
 }

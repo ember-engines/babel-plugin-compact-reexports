@@ -3,12 +3,15 @@
 const path = require('path');
 
 const babel = require('babel-core');
+const amdNameResolver = require('amd-name-resolver');
 const CompactReexports = require('../lib');
 
 QUnit.module('compact-reexports', function(hooks) {
-  function transform(code, moduleOptions) {
+  function transform(code, moduleOptions, moduleId = 'bar') {
     const options = {
-      moduleId: 'bar',
+      moduleId,
+      filename: `${moduleId}.js`,
+      resolveModuleSource: amdNameResolver.moduleResolve,
       plugins: [
         ['transform-es2015-modules-amd', moduleOptions],
         [CompactReexports]
@@ -20,6 +23,11 @@ QUnit.module('compact-reexports', function(hooks) {
   QUnit.test('correctly transforms simple re-export', function(assert) {
     const result = transform('export { default } from "foo";');
     assert.equal(result, 'define.alias("foo", "bar");');
+  });
+
+  QUnit.test('correctly transforms simple re-export of nested path', function(assert) {
+    const result = transform('export { default } from "some/path/to/foo";', undefined, 'other/path/to/bar');
+    assert.equal(result, 'define.alias("some/path/to/foo", "other/path/to/bar");');
   });
 
   QUnit.test('correctly transforms simple re-export with loose', function(assert) {
@@ -41,6 +49,11 @@ QUnit.module('compact-reexports', function(hooks) {
       noInterop: true
     });
     assert.equal(result, 'define.alias("foo", "bar");');
+  });
+
+  QUnit.test('correctly transforms re-export using relative paths', function(assert) {
+    const result = transform('export { default } from "../components/foo-bar";', undefined, 'app/components/bar-foo');
+    assert.equal(result, 'define.alias("app/components/foo-bar", "app/components/bar-foo");');
   });
 
   QUnit.test('correctly transforms re-export of module with more than one export', function(assert) {

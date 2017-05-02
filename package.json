@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ember-engines/babel-plugin-compact-reexports#readme",
   "devDependencies": {
+    "amd-name-resolver": "^0.0.6",
     "babel-core": "^6.7.4",
     "babel-plugin-transform-es2015-modules-amd": "^6.24.0",
     "qunitjs": "^2.3.2"

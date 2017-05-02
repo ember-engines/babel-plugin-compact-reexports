@@ -1,5 +1,7 @@
 # babel-plugin-compact-reexports
 
+[![Build Status](https://travis-ci.org/ember-engines/babel-plugin-compact-reexports.svg?branch=master)](https://travis-ci.org/ember-engines/babel-plugin-compact-reexports)
+
 Allows ES modules which just re-export contents of other modules to be more compact; saving you bytes over the wire.
 
 _Original discussion: [ember-engines/ember-engines#265](https://github.com/ember-engines/ember-engines/issues/265)_

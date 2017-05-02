@@ -1,0 +1,30 @@
+{
+  "name": "babel-plugin-compact-reexports",
+  "version": "0.1.0",
+  "description": "A Babel plugin to make re-export modules more compact",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-engines/babel-plugin-compact-reexports.git"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "amd",
+    "ember"
+  ],
+  "author": "Trent Willis <trentmwillis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ember-engines/babel-plugin-compact-reexports/issues"
+  },
+  "homepage": "https://github.com/ember-engines/babel-plugin-compact-reexports#readme",
+  "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.0",
+    "qunitjs": "^2.3.2"
+  }
+}

@@ -4,7 +4,8 @@
   "description": "A Babel plugin to make re-export modules more compact",
   "main": "lib/index.js",
   "scripts": {
-    "test": "qunit tests/*-test.js"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc qunit tests/*-test.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,13 @@
   },
   "homepage": "https://github.com/ember-engines/babel-plugin-compact-reexports#readme",
   "devDependencies": {
+    "amd-name-resolver": "^0.0.6",
     "babel-core": "^6.7.4",
     "babel-plugin-transform-es2015-modules-amd": "^6.24.0",
+    "coveralls": "^2.13.1",
+    "loader.js": "^4.4.0",
+    "nyc": "^10.3.0",
+    "qunit-eslint": "^1.0.0",
     "qunitjs": "^2.3.2"
   }
 }

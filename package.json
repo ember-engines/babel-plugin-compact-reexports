@@ -12,7 +12,6 @@
     "url": "git+https://github.com/ember-engines/babel-plugin-compact-reexports.git"
   },
   "keywords": [
-    "babel",
     "babel-plugin",
     "amd",
     "ember"

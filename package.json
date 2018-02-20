@@ -30,6 +30,6 @@
     "loader.js": "^4.4.0",
     "nyc": "^10.3.0",
     "qunit-eslint": "^1.0.0",
-    "qunitjs": "^2.3.2"
+    "qunitjs": "^2.4.1"
   }
 }

@@ -68,4 +68,9 @@ QUnit.module('compact-reexports', function() {
     const result = transform('const a = "boo"; export { default } from "foo";');
     assert.equal(result.indexOf('define.alias'), -1);
   });
+
+  QUnit.test('does not transform named re-exports', function (assert) {
+    const result = transform('export { foo as bar } from "foo";');
+    assert.equal(result.indexOf('define.alias'), -1)
+  });
 });

@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "test": "nyc qunit tests/*-test.js"
+    "test": "nyc qunit tests/*-test.js",
+    "test:debug": "node debug ./node_modules/.bin/qunit tests/*-test.js"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-compact-reexports",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "A Babel plugin to make re-export modules more compact",
   "main": "lib/index.js",
   "scripts": {
